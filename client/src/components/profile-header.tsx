@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Github, Linkedin, Twitter, Mail, MapPin, CheckCircle } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, MapPin, BadgeCheck } from "lucide-react";
 
 export default function ProfileHeader() {
   const profileData = {
@@ -41,22 +41,27 @@ export default function ProfileHeader() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Profile Avatar and Basic Info */}
         <div className="relative -mt-16 sm:-mt-20">
-          <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
+          <div className="flex flex-col items-start space-y-4">
             {/* Avatar - No Border, Left Aligned */}
-            <img 
-              src={profileData.profileImageUrl}
-              alt={`${profileData.name} Profile Picture`}
-              className="w-32 h-32 sm:w-40 sm:h-40 rounded-full shadow-lg object-cover"
-            />
+            <div className="relative">
+              <img 
+                src={profileData.profileImageUrl}
+                alt={`${profileData.name} Profile Picture`}
+                className="w-32 h-32 sm:w-40 sm:h-40 rounded-full shadow-lg object-cover"
+              />
+              {/* Verified Badge Under Profile Picture */}
+              {profileData.isVerified && (
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-white rounded-full p-1 shadow-lg">
+                    <BadgeCheck className="w-6 h-6 text-blue-500 fill-blue-500" />
+                  </div>
+                </div>
+              )}
+            </div>
             
-            {/* Name, Username, Pronouns, Title, and Location - Left Aligned */}
-            <div className="flex-1 space-y-2">
-              <div className="flex items-center space-x-2">
-                <h1 className="text-3xl sm:text-4xl font-bold text-slate-800">{profileData.name}</h1>
-                {profileData.isVerified && (
-                  <CheckCircle className="w-6 h-6 text-blue-500 fill-current" />
-                )}
-              </div>
+            {/* Name, Username, Pronouns, Title, and Location - Left Aligned Under Picture */}
+            <div className="space-y-2">
+              <h1 className="text-3xl sm:text-4xl font-bold text-slate-800">{profileData.name}</h1>
               <p className="text-lg text-slate-600">{profileData.username}</p>
               <p className="text-base text-slate-500">({profileData.pronouns})</p>
               <p className="text-lg sm:text-xl text-slate-600">{profileData.title}</p>
