@@ -53,7 +53,11 @@ export default function ProfileHeader() {
               {profileData.isVerified && (
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                   <div className="bg-white rounded-full p-1 shadow-lg">
-                    <BadgeCheck className="w-6 h-6 text-blue-500 fill-blue-500" />
+                    <img 
+                      src="https://img.icons8.com/material/24/228BE6/instagram-verification-badge.png" 
+                      alt="Verified Badge" 
+                      className="w-6 h-6"
+                    />
                   </div>
                 </div>
               )}
