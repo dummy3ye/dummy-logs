@@ -28,9 +28,9 @@ export default function ProfileHeader() {
   return (
     <div className="relative">
       {/* Cover Image */}
-      <div className="h-40 sm:h-48 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-800 relative overflow-hidden">
+      <div className="h-40 sm:h-48 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-800 dark:from-blue-800 dark:via-purple-800 dark:to-indigo-900 relative overflow-hidden">
         <img 
-          src="https://plus.unsplash.com/premium_photo-1704579188377-30a44bb62ff8?auto=format&fit=crop&w=1920&h=450" 
+       src="https://i.imgur.com/TePi9ZX.png" 
           alt="Professional workspace with coding setup" 
           className="w-full h-full object-cover opacity-70"
         />
@@ -51,7 +51,7 @@ export default function ProfileHeader() {
             
             {/* Name, Username, Pronouns, Title, and Location - Left Aligned Under Picture */}
             <div className="space-y-2">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 space-y-1">
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-800">{profileData.name}</h1>
                 {profileData.isVerified && (
                   <img 
