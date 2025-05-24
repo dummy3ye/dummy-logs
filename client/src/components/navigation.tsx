@@ -17,7 +17,7 @@ export default function Navigation({ activeSection, onSectionChange }: Navigatio
   ];
 
   return (
-    <nav className="sticky top-0 bg-white shadow-sm border-b border-slate-200 z-10 mt-8">
+    <nav className="sticky top-0 bg-white dark:bg-slate-800 shadow-sm border-b border-slate-200 dark:border-slate-700 z-10 mt-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex space-x-8 overflow-x-auto">
           {navItems.map((item) => {
@@ -32,7 +32,7 @@ export default function Navigation({ activeSection, onSectionChange }: Navigatio
                   "py-4 px-2 border-b-2 font-medium whitespace-nowrap transition-colors flex items-center space-x-2",
                   isActive
                     ? "border-primary text-primary"
-                    : "border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300"
+                    : "border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 hover:border-slate-300 dark:hover:border-slate-600"
                 )}
               >
                 <IconComponent className="w-4 h-4" />
