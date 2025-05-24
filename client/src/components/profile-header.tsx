@@ -7,6 +7,7 @@ export default function ProfileHeader() {
     pronouns: "he/him",
     title: "Full Stack Developer & UI/UX Designer",
     location: "San Francisco, CA",
+    profileImageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300", // Change this URL to your own image
     bio: "Passionate full-stack developer with 5+ years of experience building scalable web applications. I specialize in React, Node.js, and modern JavaScript frameworks. When I'm not coding, you'll find me exploring new technologies, contributing to open source projects, or hiking in the mountains.",
     additionalBio: "Currently working on innovative solutions that bridge the gap between design and development, with a focus on creating exceptional user experiences.",
     stats: {
@@ -40,8 +41,8 @@ export default function ProfileHeader() {
           <div className="flex flex-col items-center space-y-4">
             {/* Avatar */}
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" 
-              alt="John Developer Profile Picture" 
+              src={profileData.profileImageUrl}
+              alt={`${profileData.name} Profile Picture`}
               className="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-white shadow-xl object-cover"
             />
             
