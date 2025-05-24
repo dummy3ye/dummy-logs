@@ -4,6 +4,7 @@ import { Github, Linkedin, Twitter, Mail, MapPin } from "lucide-react";
 export default function ProfileHeader() {
   const profileData = {
     name: "John Developer",
+    pronouns: "he/him",
     title: "Full Stack Developer & UI/UX Designer",
     location: "San Francisco, CA",
     bio: "Passionate full-stack developer with 5+ years of experience building scalable web applications. I specialize in React, Node.js, and modern JavaScript frameworks. When I'm not coding, you'll find me exploring new technologies, contributing to open source projects, or hiking in the mountains.",
@@ -36,7 +37,7 @@ export default function ProfileHeader() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Profile Avatar and Basic Info */}
         <div className="relative -mt-24 sm:-mt-32">
-          <div className="flex flex-col sm:flex-row items-center sm:items-end space-y-4 sm:space-y-0 sm:space-x-6">
+          <div className="flex flex-col items-center space-y-4">
             {/* Avatar */}
             <img 
               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" 
@@ -44,11 +45,14 @@ export default function ProfileHeader() {
               className="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-white shadow-xl object-cover"
             />
             
-            {/* Name and Title */}
-            <div className="text-center sm:text-left pb-4">
-              <h1 className="text-3xl sm:text-4xl font-bold text-slate-800">{profileData.name}</h1>
-              <p className="text-lg sm:text-xl text-slate-600 mt-1">{profileData.title}</p>
-              <p className="text-slate-500 mt-1 flex items-center justify-center sm:justify-start">
+            {/* Name, Pronouns, Title, and Location - Gravatar Style */}
+            <div className="text-center space-y-2">
+              <div>
+                <h1 className="text-3xl sm:text-4xl font-bold text-slate-800">{profileData.name}</h1>
+                <p className="text-base text-slate-500 mt-1">({profileData.pronouns})</p>
+              </div>
+              <p className="text-lg sm:text-xl text-slate-600">{profileData.title}</p>
+              <p className="text-slate-500 flex items-center justify-center">
                 <MapPin className="w-4 h-4 mr-1" />
                 {profileData.location}
               </p>
