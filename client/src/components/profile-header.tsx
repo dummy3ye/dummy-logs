@@ -5,21 +5,21 @@ import { Github, Linkedin, Twitter, Mail, MapPin, BadgeCheck } from "lucide-reac
 export default function ProfileHeader() {
   const profileData = {
     name: "Dummy Sleeping",
-    username: "@dummysucks",
+    username: "@dummy3ye",
     pronouns: "he/hers",
-    title: "Dude I just exist Somehow",
-    location: "Somalia ",
+    title: "Unreal catdad, low-key hopeless romantic",
+    location: " Asian, 5'10 btw",
     isVerified: true,
-    profileImageUrl: "https://images.unsplash.com/photo-1548947513-5997dd28ccd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600", // Change this URL to your own image
-    bio: "Passionate full-stack developer with 5+ years of experience building scalable web applications. I specialize in React, Node.js, and modern JavaScript frameworks. When I'm not coding, you'll find me exploring new technologies, contributing to open source projects, or hiking in the mountains.",
-    additionalBio: "Currently working on innovative solutions that bridge the gap between design and development, with a focus on creating exceptional user experiences.",
+    profileImageUrl: "https://i.imgur.com/Nu0DWh2.jpeg", // Change this URL to your own image
+    bio: "Teenage cat dad, deep into Stuff like breaking systems (on purpose), fixing them (mostly), staying up way too late at night learning things probably won’t really need after what imma be doing. I love cooking, messy desks, and figuring out the “why” behind everything. Not a nerd (yet), but definitely the kind of person who's 'jack of all trades'",
+    additionalBio: "Historically unhinged, philosophically cooked. Crying over dead emperors, questioning if anything’s real. Every shi is a swamp of lore, chaos, and intrusive thoughts. No chill, just vibes, and maybe a lil obsession with love and ong finding fr meaning in a meaningless timeline.",
     stats: {
-      projects: "24",
+      projects: "11",
       commits: "1.2k"
     },
     socialLinks: [
       { icon: Github, label: "github.com/dummy3ye", url: "github.com/dummy3ye", color: "text-slate-700" },
-      { icon: Linkedin, label: "linkedin.com/in/dinthed", url: "#", color: "text-blue-600" },
+      { icon: Linkedin, label: "linkedin.com/in/dummyhehe", url: "#", color: "text-blue-600" },
       { icon: Twitter, label: "@dummyalwayssleeps", url: "#", color: "text-sky-500" },
       { icon: Mail, label: "dummy#hellyeah.com", url: "#", color: "text-red-500" }
     ]
@@ -30,7 +30,7 @@ export default function ProfileHeader() {
       {/* Cover Image */}
       <div className="h-40 sm:h-48 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-800 dark:from-blue-800 dark:via-purple-800 dark:to-indigo-900 relative overflow-hidden">
         <img 
-       src="https://i.imgur.com/TePi9ZX.png" 
+       src="https://i.imgur.com/Rxfdd5J.jpeg" 
           alt="Professional workspace with coding setup" 
           className="w-full h-full object-cover opacity-70"
         />
