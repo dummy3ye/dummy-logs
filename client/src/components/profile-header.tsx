@@ -1,13 +1,16 @@
 import { Card } from "@/components/ui/card";
-import { Github, Linkedin, Twitter, Mail, MapPin } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Github, Linkedin, Twitter, Mail, MapPin, CheckCircle } from "lucide-react";
 
 export default function ProfileHeader() {
   const profileData = {
-    name: "John Developer",
-    pronouns: "he/him",
-    title: "Full Stack Developer & UI/UX Designer",
-    location: "San Francisco, CA",
-    profileImageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300", // Change this URL to your own image
+    name: "Dummy Sleeping",
+    username: "@dummysucks",
+    pronouns: "he/hers",
+    title: "Dude I just exist Somehow",
+    location: "Somalia ",
+    isVerified: true,
+    profileImageUrl: "https://images.unsplash.com/photo-1548947513-5997dd28ccd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600", // Change this URL to your own image
     bio: "Passionate full-stack developer with 5+ years of experience building scalable web applications. I specialize in React, Node.js, and modern JavaScript frameworks. When I'm not coding, you'll find me exploring new technologies, contributing to open source projects, or hiking in the mountains.",
     additionalBio: "Currently working on innovative solutions that bridge the gap between design and development, with a focus on creating exceptional user experiences.",
     stats: {
@@ -15,19 +18,19 @@ export default function ProfileHeader() {
       commits: "1.2k"
     },
     socialLinks: [
-      { icon: Github, label: "github.com/johndeveloper", url: "#", color: "text-slate-700" },
-      { icon: Linkedin, label: "linkedin.com/in/johndeveloper", url: "#", color: "text-blue-600" },
-      { icon: Twitter, label: "@johndev", url: "#", color: "text-sky-500" },
-      { icon: Mail, label: "john@example.com", url: "#", color: "text-red-500" }
+      { icon: Github, label: "github.com/dummy3ye", url: "github.com/dummy3ye", color: "text-slate-700" },
+      { icon: Linkedin, label: "linkedin.com/in/dinthed", url: "#", color: "text-blue-600" },
+      { icon: Twitter, label: "@dummyalwayssleeps", url: "#", color: "text-sky-500" },
+      { icon: Mail, label: "dummy#hellyeah.com", url: "#", color: "text-red-500" }
     ]
   };
 
   return (
     <div className="relative">
       {/* Cover Image */}
-      <div className="h-64 sm:h-80 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-800 relative overflow-hidden">
+      <div className="h-40 sm:h-48 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-800 relative overflow-hidden">
         <img 
-          src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=640" 
+          src="https://plus.unsplash.com/premium_photo-1704579188377-30a44bb62ff8?auto=format&fit=crop&w=1920&h=450" 
           alt="Professional workspace with coding setup" 
           className="w-full h-full object-cover opacity-70"
         />
@@ -37,23 +40,27 @@ export default function ProfileHeader() {
       {/* Profile Content Container */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Profile Avatar and Basic Info */}
-        <div className="relative -mt-24 sm:-mt-32">
-          <div className="flex flex-col items-center space-y-4">
-            {/* Avatar */}
+        <div className="relative -mt-16 sm:-mt-20">
+          <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
+            {/* Avatar - No Border, Left Aligned */}
             <img 
               src={profileData.profileImageUrl}
               alt={`${profileData.name} Profile Picture`}
-              className="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-white shadow-xl object-cover"
+              className="w-32 h-32 sm:w-40 sm:h-40 rounded-full shadow-lg object-cover"
             />
             
-            {/* Name, Pronouns, Title, and Location - Gravatar Style */}
-            <div className="text-center space-y-2">
-              <div>
+            {/* Name, Username, Pronouns, Title, and Location - Left Aligned */}
+            <div className="flex-1 space-y-2">
+              <div className="flex items-center space-x-2">
                 <h1 className="text-3xl sm:text-4xl font-bold text-slate-800">{profileData.name}</h1>
-                <p className="text-base text-slate-500 mt-1">({profileData.pronouns})</p>
+                {profileData.isVerified && (
+                  <CheckCircle className="w-6 h-6 text-blue-500 fill-current" />
+                )}
               </div>
+              <p className="text-lg text-slate-600">{profileData.username}</p>
+              <p className="text-base text-slate-500">({profileData.pronouns})</p>
               <p className="text-lg sm:text-xl text-slate-600">{profileData.title}</p>
-              <p className="text-slate-500 flex items-center justify-center">
+              <p className="text-slate-500 flex items-center">
                 <MapPin className="w-4 h-4 mr-1" />
                 {profileData.location}
               </p>
