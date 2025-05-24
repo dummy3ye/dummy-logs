@@ -2,7 +2,9 @@ import { useState } from "react";
 import ProfileHeader from "@/components/profile-header";
 import Navigation from "@/components/navigation";
 import NotesSection from "@/components/notes-section";
+import GitHubSection from "@/components/github-section";
 import PlaceholderSection from "@/components/placeholder-section";
+import ThemeToggle from "@/components/theme-toggle";
 import { Github, Code, Box, Boxes, Package } from "lucide-react";
 
 export default function Home() {
@@ -13,15 +15,7 @@ export default function Home() {
       case "notes":
         return <NotesSection />;
       case "github":
-        return (
-          <PlaceholderSection
-            icon={Github}
-            title="GitHub Integration"
-            description="Connect your GitHub account to showcase your repositories and contributions."
-            buttonText="Connect GitHub"
-            buttonAction={() => console.log("Connect GitHub")}
-          />
-        );
+        return <GitHubSection />;
       case "projects":
         return (
           <PlaceholderSection
@@ -62,7 +56,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-900">
       <ProfileHeader />
       <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
       
@@ -70,13 +64,15 @@ export default function Home() {
         {renderSection()}
       </main>
 
-      <footer className="bg-white border-t border-slate-200 mt-16">
+      <footer className="bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 mt-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="text-center text-slate-600">
+          <div className="text-center text-slate-600 dark:text-slate-400">
             <p>&copy; 2024 John Developer. Built with passion and modern web technologies.</p>
           </div>
         </div>
       </footer>
+      
+      <ThemeToggle />
     </div>
   );
 }
