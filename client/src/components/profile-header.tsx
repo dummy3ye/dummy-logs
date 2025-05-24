@@ -43,29 +43,24 @@ export default function ProfileHeader() {
         <div className="relative -mt-16 sm:-mt-20">
           <div className="flex flex-col items-start space-y-4">
             {/* Avatar - No Border, Left Aligned */}
-            <div className="relative">
-              <img 
-                src={profileData.profileImageUrl}
-                alt={`${profileData.name} Profile Picture`}
-                className="w-32 h-32 sm:w-40 sm:h-40 rounded-full shadow-lg object-cover"
-              />
-              {/* Verified Badge Under Profile Picture */}
-              {profileData.isVerified && (
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-white rounded-full p-1 shadow-lg">
-                    <img 
-                      src="https://img.icons8.com/material/24/228BE6/instagram-verification-badge.png" 
-                      alt="Verified Badge" 
-                      className="w-6 h-6"
-                    />
-                  </div>
-                </div>
-              )}
-            </div>
+            <img 
+              src={profileData.profileImageUrl}
+              alt={`${profileData.name} Profile Picture`}
+              className="w-32 h-32 sm:w-40 sm:h-40 rounded-full shadow-lg object-cover"
+            />
             
             {/* Name, Username, Pronouns, Title, and Location - Left Aligned Under Picture */}
             <div className="space-y-2">
-              <h1 className="text-3xl sm:text-4xl font-bold text-slate-800">{profileData.name}</h1>
+              <div className="flex items-center space-x-2">
+                <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-800">{profileData.name}</h1>
+                {profileData.isVerified && (
+                  <img 
+                    src="https://img.icons8.com/material/24/228BE6/instagram-verification-badge.png" 
+                    alt="Verified Badge" 
+                    className="w-6 h-6"
+                  />
+                )}
+              </div>
               <p className="text-lg text-slate-600">{profileData.username}</p>
               <p className="text-base text-slate-500">({profileData.pronouns})</p>
               <p className="text-lg sm:text-xl text-slate-600">{profileData.title}</p>
