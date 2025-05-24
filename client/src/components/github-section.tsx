@@ -34,7 +34,7 @@ export default function GitHubSection() {
   // Featured repositories - you can customize these
   const featuredRepos = [
     "dummy3ye/ariwa",
-    "dummy3ye/next-project",
+    "dummy3ye/dummy-logs",
     "dummy3ye/react-components",
     "dummy3ye/node-api",
     "dummy3ye/python-scripts",
