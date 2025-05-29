@@ -28,7 +28,7 @@ export default function ProfileHeader() {
   return (
     <div className="relative">
       {/* Cover Image */}
-      <div className="h-40 sm:h-48 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-800 dark:from-blue-800 dark:via-purple-800 dark:to-indigo-900 relative overflow-hidden">
+      <div className="relative h-48 bg-cover bg-center bg-no-repeat">
         <img 
        src="https://i.imgur.com/Rxfdd5J.jpeg" 
           alt="Professional workspace with coding setup" 
