@@ -31,37 +31,37 @@ export class MemStorage implements IStorage {
         title: "React Best Practices",
         content: "Always use functional components with hooks. Remember to memoize expensive calculations with useMemo and useCallback when needed. Keep components small and focused on a single responsibility.",
         category: "Development",
-        author: "John Developer"
+        author: "Dummy huh ?"
       },
       {
         title: "CSS Grid Layout",
         content: "CSS Grid is perfect for two-dimensional layouts. Use grid-template-areas for complex layouts and remember that Grid and Flexbox work great together - Grid for the overall layout, Flexbox for components.",
         category: "Design",
-        author: "John Developer"
+        author: "hehe Dummy"
       },
       {
         title: "API Design Patterns",
         content: "REST APIs should be resource-oriented. Use proper HTTP methods (GET, POST, PUT, DELETE) and status codes. Always implement proper error handling and consider rate limiting for production APIs.",
         category: "Backend",
-        author: "John Developer"
+        author: "Dummyyeh"
       },
       {
         title: "Database Optimization",
         content: "Index your frequently queried columns but don't over-index. Use EXPLAIN to understand query execution plans. Consider denormalization for read-heavy applications and always use connection pooling.",
         category: "Database",
-        author: "John Developer"
+        author: "Dummy again"
       },
       {
         title: "UI/UX Principles",
         content: "Design for accessibility first. Use consistent spacing, proper contrast ratios, and clear visual hierarchy. The best interface is the one the user doesn't have to think about. Test with real users early and often.",
         category: "Design",
-        author: "John Developer"
+        author: "who th am i"
       },
       {
         title: "Performance Monitoring",
         content: "Monitor Core Web Vitals: LCP, FID, and CLS. Use tools like Lighthouse, WebPageTest, and real user monitoring. Optimize images, minimize JavaScript bundles, and implement proper caching strategies.",
         category: "DevOps",
-        author: "John Developer"
+        author: "nah, dummy again"
       }
     ];
 
