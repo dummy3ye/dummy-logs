@@ -28,13 +28,13 @@ export default function ProfileHeader() {
   return (
     <div className="relative">
       {/* Cover Image */}
-      <div className="relative h-48 bg-cover bg-center bg-no-repeat">
+      <div className="relative h-48 bg-cover bg-center bg-attachment-fixed bg-no-repeat">
         <img 
        src="https://i.imgur.com/Rxfdd5J.jpeg" 
           alt="Professional workspace with coding setup" 
-          className="w-full h-full object-cover opacity-100"
+          className="w-full bg-attachment-fixed h-full object-cover opacity-100"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+        <div className="absolute bg-attachment-fixed inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
       </div>
       
       {/* Profile Content Container */}
