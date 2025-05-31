@@ -28,10 +28,10 @@ export class MemStorage implements IStorage {
   private initializeNotes() {
     const sampleNotes: InsertNote[] = [
       {
-        title: "React Best Practices",
-        content: "Always use functional components with hooks. Remember to memoize expensive calculations with useMemo and useCallback when needed. Keep components small and focused on a single responsibility.",
-        category: "Development",
-        author: "Dummy huh ?"
+        title: "Hercules",
+        content: "People do crazy things when they’re in love.",
+        category: "Love",
+        author: "Megara"
       },
       {
         title: "CSS Grid Layout",

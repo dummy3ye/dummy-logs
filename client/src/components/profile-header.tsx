@@ -7,7 +7,7 @@ export default function ProfileHeader() {
     name: "Dummy Sleeping",
     username: "@dummy3ye",
     pronouns: "he/hers",
-    title: "Unreal catdad, low-key hopeless romantic",
+    title: "hopeless romantic",
     location: " Asian, 5'10 btw",
     isVerified: true,
     profileImageUrl: "https://i.imgur.com/Nu0DWh2.jpeg", // Change this URL to your own image
@@ -32,7 +32,7 @@ export default function ProfileHeader() {
         <img 
        src="https://i.imgur.com/Rxfdd5J.jpeg" 
           alt="Professional workspace with coding setup" 
-          className="w-full h-full object-cover opacity-70"
+          className="w-full h-full object-cover opacity-100"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
       </div>
