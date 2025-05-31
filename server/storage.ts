@@ -29,39 +29,39 @@ export class MemStorage implements IStorage {
     const sampleNotes: InsertNote[] = [
       {
         title: "Hercules",
-        content: "People do crazy things when they’re in love.",
+        content: "People do crazy things when they're in love.",
         category: "Love",
         author: "Megara"
       },
       {
-        title: "CSS Grid Layout",
-        content: "CSS Grid is perfect for two-dimensional layouts. Use grid-template-areas for complex layouts and remember that Grid and Flexbox work great together - Grid for the overall layout, Flexbox for components.",
-        category: "Design",
-        author: "hehe Dummy"
+        title: "Again ?!",
+        content: "Life is Just About going for What You feel. Over and over and over and over again.",
+        category: "Life",
+        author: "hehe dummy"
       },
       {
-        title: "API Design Patterns",
-        content: "REST APIs should be resource-oriented. Use proper HTTP methods (GET, POST, PUT, DELETE) and status codes. Always implement proper error handling and consider rate limiting for production APIs.",
-        category: "Backend",
-        author: "Dummyyeh"
+        title: "Give Up",
+        content: "I don't ever give up.
+        category: "A Podcast",
+        author: "Elon Musk"
       },
       {
-        title: "Database Optimization",
-        content: "Index your frequently queried columns but don't over-index. Use EXPLAIN to understand query execution plans. Consider denormalization for read-heavy applications and always use connection pooling.",
-        category: "Database",
+        title: "Destiny",
+        content: "There will be days when you'll find no one who got your back, keep going for your destiny. And That's what destiny means.",
+        category: "Dream",
         author: "Dummy again"
       },
       {
-        title: "UI/UX Principles",
-        content: "Design for accessibility first. Use consistent spacing, proper contrast ratios, and clear visual hierarchy. The best interface is the one the user doesn't have to think about. Test with real users early and often.",
-        category: "Design",
-        author: "who th am i"
+        title: "I have no mouth",
+        content: "And i was trapped. i alone had no body. no senses. no feelings. i was in hell, looking at heaven",
+        category: "Hell",
+        author: "Α.Μ."
       },
       {
-        title: "Performance Monitoring",
-        content: "Monitor Core Web Vitals: LCP, FID, and CLS. Use tools like Lighthouse, WebPageTest, and real user monitoring. Optimize images, minimize JavaScript bundles, and implement proper caching strategies.",
-        category: "DevOps",
-        author: "nah, dummy again"
+        title: "na",
+        content: "i love brownies",
+        category: "i",
+        author: "ari"
       }
     ];
 
