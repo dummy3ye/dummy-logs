@@ -41,7 +41,7 @@ export class MemStorage implements IStorage {
       },
       {
         title: "Give Up",
-        content: "I don't ever give up.
+        content: "I don't ever give up.",
         category: "A Podcast",
         author: "Elon Musk"
       },
