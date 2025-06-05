@@ -58,8 +58,11 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-900">
       <ProfileHeader />
-      <Navigation activeSection={activeSection} onSectionChange={setActiveSection} />
-      
+      <Navigation
+        activeSection={activeSection}
+        onSectionChange={setActiveSection}
+      />
+
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {renderSection()}
       </main>
@@ -67,11 +70,11 @@ export default function Home() {
       <footer className="bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 mt-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center text-slate-600 dark:text-slate-400">
-            <p>&copy; 2024 John Developer. Built with passion and modern web technologies.</p>
+            <p>&copy; Hehe, The End.</p>
           </div>
         </div>
       </footer>
-      
+
       <ThemeToggle />
     </div>
   );
