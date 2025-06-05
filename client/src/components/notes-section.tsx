@@ -22,10 +22,13 @@ export default function NotesSection() {
             Add Note
           </Button>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Array.from({ length: 6 }).map((_, i) => (
-            <div key={i} className="bg-white rounded-xl p-6 border border-slate-100 animate-pulse">
+            <div
+              key={i}
+              className="bg-white rounded-xl p-6 border border-slate-100 animate-pulse"
+            >
               <div className="h-4 bg-slate-200 rounded mb-4"></div>
               <div className="space-y-2">
                 <div className="h-3 bg-slate-200 rounded"></div>
@@ -51,7 +54,7 @@ export default function NotesSection() {
           Add Note
         </Button>
       </div>
-      
+
       {notes && notes.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {notes.map((note) => (
@@ -61,8 +64,12 @@ export default function NotesSection() {
       ) : (
         <div className="text-center py-16">
           <StickyNote className="w-16 h-16 text-slate-400 mx-auto mb-4" />
-          <h3 className="text-xl font-semibold text-slate-600 mb-2">No notes yet</h3>
-          <p className="text-slate-500 mb-6">Start creating notes to organize your thoughts and ideas.</p>
+          <h3 className="text-xl font-semibold text-slate-600 mb-2">
+            No notes yet
+          </h3>
+          <p className="text-slate-500 mb-6">
+            Start creating notes to organize your thoughts and ideas.
+          </p>
           <Button>
             <Plus className="w-4 h-4 mr-2" />
             Create your first note
