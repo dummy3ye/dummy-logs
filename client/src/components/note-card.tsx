@@ -10,11 +10,13 @@ interface NoteCardProps {
 export default function NoteCard({ note }: NoteCardProps) {
   const getCategoryColor = (category: string) => {
     const colors: Record<string, string> = {
-      "Development": "bg-slate-100 text-slate-700",
-      "Design": "bg-green-100 text-green-700",
-      "Backend": "bg-blue-100 text-blue-700",
-      "Database": "bg-purple-100 text-purple-700",
-      "DevOps": "bg-orange-100 text-orange-700",
+      Life: "bg-green-100 text-green-700",
+      Love: "bg-blue-100 text-blue-700",
+      Hell: "bg-red-100 text-red-700",
+      "A podcast": "bg-yellow-100 text-yellow-700",
+      i: "bg-pink-100 text-pink-700",
+      Dream: "bg-purple-100 text-purple-700",
+      A: "bg-cyan-100 text-cyan-700",
     };
     return colors[category] || "bg-gray-100 text-gray-700";
   };
@@ -28,9 +30,7 @@ export default function NoteCard({ note }: NoteCardProps) {
             {note.category}
           </Badge>
         </div>
-        <p className="text-slate-600 mb-4 line-clamp-3">
-          {note.content}
-        </p>
+        <p className="text-slate-600 mb-4 line-clamp-3">{note.content}</p>
         <div className="flex items-center justify-between text-sm text-slate-500">
           <span>{note.author}</span>
           <span>{formatTimeAgo(note.createdAt)}</span>
