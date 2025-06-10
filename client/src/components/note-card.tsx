@@ -13,7 +13,7 @@ export default function NoteCard({ note }: NoteCardProps) {
       Life: "bg-green-100 text-green-700",
       Love: "bg-blue-100 text-blue-700",
       Hell: "bg-red-100 text-red-700",
-      A podcast: "bg-yellow-100 text-yellow-700",
+      podcast: "bg-yellow-100 text-yellow-700",
       i: "bg-pink-100 text-pink-700",
       Dream: "bg-purple-100 text-purple-700",
       A: "bg-cyan-100 text-cyan-700",
